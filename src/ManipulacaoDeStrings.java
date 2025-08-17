@@ -23,5 +23,6 @@ public class ManipulacaoDeStrings {
         System.out.println(word1);
         System.out.println(word2);
         System.out.println(word3);
+
     }
 }
