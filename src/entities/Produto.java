@@ -1,9 +1,8 @@
 package entities;
 
-import java.util.Scanner;
 
 public class Produto {
-    Scanner sc = new Scanner(System.in);
+
     // atributos
     public String name;
     public double price;
@@ -21,4 +20,7 @@ public class Produto {
         this.amount -= amount;
     }
 
+    public String toString(){
+        return name + ", $" + String.format("%.2f", price) + ", " + amount + " units," + " Total = $" + String.format("%.2f", TotalValueInStock());
+    }
 }

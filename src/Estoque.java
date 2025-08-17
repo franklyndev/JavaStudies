@@ -16,9 +16,10 @@ public class Estoque {
         x.price = sc.nextDouble();
         System.out.print("Amount: ");
         x.amount = sc.nextInt();
-        double totalValue = x.TotalValueInStock();
-        System.out.printf("Product data: %s, %d, %.2f. Total: %.2f%n", x.name, x.amount, x.price, totalValue);
 
-        
+
+        System.out.println(x);
+
+
     }
 }
