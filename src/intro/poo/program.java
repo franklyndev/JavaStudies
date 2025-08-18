@@ -1,7 +1,7 @@
-package IntroduçãoAPOO;
+package intro.poo;
 
 import java.util.Scanner;
-import IntroduçãoAPOO.entities.Triangle;
+import intro.poo.entities.Triangle;
 
 public class program {
     public static void main(String [] args){
@@ -28,7 +28,7 @@ public class program {
         double areaX = x.CalculoArea();
         double areaY = y.CalculoArea();
 
-        System.out.printf("IntroduçãoAPOO.entities.Triangle X area: %.4f%nTriangle Y area: %.4f%n", areaX, areaY);
+        System.out.printf("Triangle X area: %.4f%nTriangle Y area: %.4f%n", areaX, areaY);
 
 
     }

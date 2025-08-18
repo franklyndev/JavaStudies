@@ -1,4 +1,4 @@
-package IntroduçãoAPOO;
+package intro.poo;
 
 import java.util.Scanner;
 public class programTrianglePure {

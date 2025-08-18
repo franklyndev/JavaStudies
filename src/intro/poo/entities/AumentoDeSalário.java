@@ -1,4 +1,4 @@
-package IntroduçãoAPOO;
+package intro.poo.entities;
 
 public class AumentoDeSalário {
     public String Name;

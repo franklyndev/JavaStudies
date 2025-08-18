@@ -1,6 +1,6 @@
-package IntroduçãoAPOO.entities;
+package intro.poo;
 
-import IntroduçãoAPOO.AumentoDeSalário;
+import intro.poo.entities.AumentoDeSalário;
 
 import java.util.Scanner;
 

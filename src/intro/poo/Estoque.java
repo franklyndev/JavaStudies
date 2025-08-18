@@ -1,6 +1,6 @@
-package IntroduçãoAPOO;
+package intro.poo;
 
-import IntroduçãoAPOO.entities.Produto;
+import intro.poo.entities.Produto;
 
 import java.util.Scanner;
 
