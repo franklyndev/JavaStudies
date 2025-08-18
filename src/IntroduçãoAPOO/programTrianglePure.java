@@ -1,3 +1,5 @@
+package IntroduçãoAPOO;
+
 import java.util.Scanner;
 public class programTrianglePure {
 

@@ -1,4 +1,4 @@
-package entities;
+package IntroduçãoAPOO.entities;
 
 
 public class Produto {
