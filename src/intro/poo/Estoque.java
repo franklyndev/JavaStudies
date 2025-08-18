@@ -8,22 +8,21 @@ public class Estoque {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         Produto product;
-        product = new Produto();
 
         System.out.println("-----Replacement----- ");
         System.out.println("Enter product data:");
         System.out.print("Name: ");
-        product.name = sc.next();
+        String name = sc.next();
         System.out.print("Price: $");
-        product.price = sc.nextDouble();
+        double price = sc.nextDouble();
         System.out.print("Amount: ");
-        product.amount = sc.nextInt();
-
+        int amount = sc.nextInt();
+        product = new Produto(name, price, amount); // Objeto iniciado com atributos prontos, usando construtor
 
         System.out.println("Product Data: " + product);
 
         System.out.println("Enter the number of products to be added in stock: ");
-        int amount = sc.nextInt();
+        amount = sc.nextInt();
         product.AddProducts(amount);
 
         System.out.println("");
