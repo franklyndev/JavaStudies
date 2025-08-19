@@ -15,10 +15,11 @@ public class Estoque {
         String name = sc.next();
         System.out.print("Price: $");
         double price = sc.nextDouble();
-        System.out.print("Amount: ");
+        System.out.println("Amount: ");
         int amount = sc.nextInt();
         product = new Produto(name, price, amount); // Objeto iniciado com atributos prontos, usando construtor
-
+        // product = new Produto(name, price); // Objeto iniciado com dois atributos pronto e "amount" = 0
+        // product = new Produto(); // Objeto iniado com todos atibutos vazios, para atribuir depois
         System.out.println("Product Data: " + product);
 
         System.out.println("Enter the number of products to be added in stock: ");

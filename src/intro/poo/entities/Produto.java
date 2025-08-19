@@ -8,11 +8,19 @@ public class Produto {
     public double price;
     public int amount;
 
-    // Construtor
+    // Construtor vazio: atribuo depois
+    public Produto (){}
+
+    // Construtor 1: Inicializa todos os atributos com valores
     public Produto(String name, double price, int amount){
         this.name = name;
         this.price = price;
         this.amount = amount;
+    }
+    // Construtor 2: Inicializa os atributos "name" e "price" com valores e "amount" sem valor = 0;
+    public Produto(String name, double price){
+        this.name = name;
+        this.price = price;
     }
     // Valor total no estoque
     public double TotalValueInStock(){
