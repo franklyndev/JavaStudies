@@ -4,24 +4,44 @@ package intro.poo.entities;
 public class Produto {
 
     // atributos
-    public String name;
-    public double price;
-    public int amount;
+    private String name;
+    private double price;
+    private int amount;
 
-    // Construtor vazio: atribuo depois
-    public Produto (){}
+    public Produto() {
+    }
 
-    // Construtor 1: Inicializa todos os atributos com valores
-    public Produto(String name, double price, int amount){
+    public Produto(String name, double price, int amount) {
         this.name = name;
         this.price = price;
         this.amount = amount;
     }
-    // Construtor 2: Inicializa os atributos "name" e "price" com valores e "amount" sem valor = 0;
-    public Produto(String name, double price){
+
+    public Produto(String name, double price) {
         this.name = name;
         this.price = price;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
     // Valor total no estoque
     public double TotalValueInStock(){
         return price * amount;
