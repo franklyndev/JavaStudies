@@ -2,17 +2,27 @@ package intro.poo.entities;
 
 public class Banco {
     private int accountNumber;
-    public String name;
+    private String name;
     private double balance;
 
-    // número da conta
-    public void setAccountNumber(int accountNumber) {
+    public Banco(int accountNumber, String name, double balance) {
         this.accountNumber = accountNumber;
+        this.name = name;
+        deposit(balance);
     }
 
-    // define saldo inicial
-    public void setBalance(double balance){
-        this.balance = balance;
+    // número da conta
+    public Banco (int accountNumber, String name) {
+        this.accountNumber = accountNumber;
+        this.name = name;
+    }
+
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
+    public String getName() {
+        return name;
     }
 
     // depositar
@@ -30,6 +40,6 @@ public class Banco {
     }
 
     public String toString(){
-        return String.format("Account: " + "%d" + ", Holder: " + "%s" + ", Balance: $" + "%.2f", accountNumber, name, getBalance());
+        return String.format("Account: " + "%d" + ", Holder: " + "%s" + ", Balance: $" + "%.2f", getAccountNumber(), getName(), getBalance());
     }
 }
