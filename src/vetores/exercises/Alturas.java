@@ -1,39 +1,55 @@
 package vetores.exercises;
 
-import vetores.exercises.classes.vetores.Dados;
-
 import java.util.Scanner;
 
 public class Alturas {
-    public static void main(String [] args){
+
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        // variáveis
+        double alturaSoma = 0;
+        double alturaMedia;
+        double porcentagemDeMenores = 0;
 
         System.out.print("Quantas pessoas serão digitadas: ");
         int n = sc.nextInt();
 
+        // vetores
+        String[] nome = new String[n];
+        int[] idade = new int[n];
+        double[] altura = new double[n];
 
-        double porcentagem = 0;
-        double somaAlturas = 0;
-
-        Dados[] vect = new Dados[n];
-        for (int i = 0; i < vect.length; i++) {
-            System.out.println("Dados da" + i + 1 + "ª pessoa: ");
+        // Fazer leitura dos dados das pessoas;
+        for (int i = 0; i < n; i++){
+            sc.nextLine();
+            System.out.printf("Dados da %sª pessoa: %n",i+1);
             System.out.print("Nome: ");
-            String name = sc.next();
+            nome[i] = sc.nextLine();
             System.out.print("Idade: ");
-            int idade = sc.nextInt();
+            idade[i] = sc.nextInt();
             System.out.print("Altura: ");
-            double altura = sc.nextDouble();
-            vect[i] = new Dados(name, idade, altura, n);
-            somaAlturas += altura;
-
-            double media = somaAlturas / n;
-            System.out.print("Altura média: " + media);
-            System.out.print("Pessoas com menos de 16 anos: ");
-
-            sc.close();
+            altura[i] = sc.nextDouble();
+        }
+        // porcentagem de menores + soma de todas as alturas
+        for (int i = 0; i < n; i++){
+            if (idade[i] < 16) {
+                porcentagemDeMenores++;
+            }
+            alturaSoma += altura[i];
         }
 
+        porcentagemDeMenores = (porcentagemDeMenores / n) * 100;
+        alturaMedia = alturaSoma / n;
+
+        System.out.printf("Altura média: %.2f%n", alturaMedia);
+        System.out.printf("Pessoas com menos de 16 anos: %.1f%n", porcentagemDeMenores);
+
+        for (int i = 0; i < n; i++){
+            if (idade[i] < 16) {
+                System.out.printf("%s%n", nome[i]);
+            }
+        }
+        sc.close();
     }
 }
