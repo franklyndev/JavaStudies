@@ -2,7 +2,7 @@ package vetores.exercises;
 
 import java.util.Scanner;
 
-public class Alturas {
+public class Alturas_RF {
 
     public static void main(String[] args) {
 

@@ -8,7 +8,7 @@ public class MaisVelho {
 
         int idadeVelha = 0;
         String nomeVelho = "";
-        
+
         System.out.print("Quantas pessoas você vai digitar: ");
         int n = sc.nextInt();
 
