@@ -1,5 +1,7 @@
 package heranca.polimorfismo.product.exercise;
 
+import intro.poo.entities.Triangle;
+
 public class UsedProduct extends Product{
 
     private String date;

@@ -1,11 +1,12 @@
-package heranca.polimorfismo;
+package heranca.polimorfismo.account.exercise;
 
-public class BusinessAccount extends Account{
+public class BusinessAccount extends Account {
 
     private Double loanLimit;
 
 
     public BusinessAccount(){
+        super();
     }
 
     public BusinessAccount(Integer number, String holder, Double balance, Double loanLimit) {
@@ -19,6 +20,12 @@ public class BusinessAccount extends Account{
 
     public void setLoanLimit(Double loanLimit){
         this.loanLimit = loanLimit;
+    }
+
+    @Override
+    public void withdraw(double amount){
+        super.withdraw(amount);
+        balance -= 2;
     }
 
     public void loan(double amount){

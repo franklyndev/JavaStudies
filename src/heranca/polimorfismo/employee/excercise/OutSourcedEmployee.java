@@ -27,6 +27,6 @@ public class OutSourcedEmployee extends Employee{
     }
 
     public String toString(){
-        return "PAYMENTS: \n" + name + " - $" + String.format("%.2f", payment());
+        return name + " - $" + String.format("%.2f", payment());
     }
 }
